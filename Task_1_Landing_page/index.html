@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Popular Places In India</title>
-  <link rel="shortcut icon" type="image/png" sizes="32x32" href="favicon.jpg">
+  <link rel="icon" href="favicon.jpg">
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,11 +20,9 @@
           <img src="globe.jpg" alt="Logo">
           <h1>World Map</h1>
         </div>
-
         <!-- Google Translate Widget -->
-        <div class="language-select" id="language-select">
-          <div id="google_translate_element"></div>
-        </div>
+        <!-- Language dropdown -->
+        <div id="google_translate_element"></div>
       </div>
 
       <!-- Bg Image -->
@@ -214,9 +213,19 @@
       <p>Presented by M. Dixit</p>
     </footer>
   </div>
+
   <!-- For Language change -->
-  <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <script src="/script.js"></script>
+ <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,fr,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
+
 </html>
